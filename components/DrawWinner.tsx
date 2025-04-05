@@ -1,17 +1,14 @@
-import { useContract, useContractRead, useContractWrite } from "@thirdweb-dev/react";
+
+import { useContract, useContractWrite } from "@thirdweb-dev/react";
 import { useEffect, useState } from "react";
-
 const contractAddress = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as string;
-
 interface Props {
   userAddress: string | undefined;
 }
-
 export default function DrawWinner({ userAddress }: Props) {
   const { contract } = useContract(contractAddress);
   const [owner, setOwner] = useState<string | null>(null);
   const { mutateAsync: drawWinner, isLoading } = useContractWrite(contract, "drawWinner");
-
   useEffect(() => {
     const fetchOwner = async () => {
       if (!contract) return;
@@ -20,7 +17,6 @@ export default function DrawWinner({ userAddress }: Props) {
     };
     fetchOwner();
   }, [contract]);
-
   const handleDraw = async () => {
     try {
       await drawWinner([]);
@@ -30,9 +26,7 @@ export default function DrawWinner({ userAddress }: Props) {
       alert("Draw failed.");
     }
   };
-
   if (!userAddress || owner?.toLowerCase() !== userAddress.toLowerCase()) return null;
-
   return (
     <button
       onClick={handleDraw}

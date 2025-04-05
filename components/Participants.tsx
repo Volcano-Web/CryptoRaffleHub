@@ -1,11 +1,9 @@
+
 import { useContract, useContractRead } from "@thirdweb-dev/react";
-
 const contractAddress = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as string;
-
 export default function Participants() {
   const { contract } = useContract(contractAddress);
   const { data: players, isLoading } = useContractRead(contract, "getPlayers");
-
   return (
     <div>
       <h2 className="text-xl font-semibold mb-2">👥 Participants:</h2>

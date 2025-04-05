@@ -1,8 +1,3 @@
 # CryptoRaffleHub
 
-Run:
-
-```bash
-yarn install
-yarn dev
-```
+USDT raffle dApp built with Next.js, Tailwind and Thirdweb.

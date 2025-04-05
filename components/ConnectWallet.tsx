@@ -1,8 +1,7 @@
-import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 
+import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 export default function WalletConnect() {
   const address = useAddress();
-
   return (
     <div className="flex items-center justify-center gap-4">
       {address ? (
@@ -12,7 +11,6 @@ export default function WalletConnect() {
       ) : (
         <div className="text-sm text-zinc-400">Connect your wallet to begin</div>
       )}
-
       <ConnectWallet
         btnTitle="Connect Wallet"
         modalTitle="Connect Your Wallet"

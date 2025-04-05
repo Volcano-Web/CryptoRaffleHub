@@ -1,18 +1,15 @@
+
 import { useAddress, useContract, useContractWrite } from "@thirdweb-dev/react";
 import { useState } from "react";
-
 const contractAddress = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as string;
-
 export default function BuyTicket() {
   const address = useAddress();
   const { contract } = useContract(contractAddress);
   const { mutateAsync: buyTicket, isLoading } = useContractWrite(contract, "buyTicket");
   const [error, setError] = useState("");
-
   const handleBuy = async () => {
     if (!address || !buyTicket) return;
     setError("");
-
     try {
       await buyTicket([]);
       alert("🎉 Ticket purchased!");
@@ -21,7 +18,6 @@ export default function BuyTicket() {
       setError("Transaction failed. Please try again.");
     }
   };
-
   return (
     <div className="space-y-2">
       <button
