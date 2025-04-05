@@ -1,4 +1,1 @@
-{
-  "name": "cryptorafflehub",
-  "version": "1.0.0"
-}
+{ "name": "cryptorafflehub", "version": "1.0.0", "scripts": { "dev": "next dev", "build": "next build", "start": "next start" } }

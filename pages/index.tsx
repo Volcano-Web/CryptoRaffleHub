@@ -1,0 +1,1 @@
+// Main page with wallet connect and buy ticket UI

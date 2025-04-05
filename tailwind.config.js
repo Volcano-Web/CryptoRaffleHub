@@ -1,1 +1,1 @@
-// Tailwind config
+// TailwindCSS config
