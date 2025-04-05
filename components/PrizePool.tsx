@@ -1,1 +1,0 @@
-// Prize pool display component with contract call

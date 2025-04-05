@@ -1,4 +1,4 @@
-// Main page with wallet connect and buy ticket UI
+
 import { useAddress, useContract, useContractRead, useContractWrite, ConnectWallet } from "@thirdweb-dev/react";
 import { useEffect, useState } from "react";
 

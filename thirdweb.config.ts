@@ -1,1 +1,0 @@
-// Thirdweb client config for contract + chain

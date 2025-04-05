@@ -1,1 +1,0 @@
-// Buy Ticket component logic calling buyTicket function
